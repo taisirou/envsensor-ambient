@@ -26,7 +26,7 @@ latest_update = datetime.datetime.now()
 while True:
     data = o.getLatestData(uId)
     if data is not None:
-
+        print(data.val_temp)
         if data.tick_last_update > latest_update:
             am.send({
                 'created': data.tick_last_update.strftime('%Y-%m-%d %H:%M:%S'),
